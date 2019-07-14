@@ -1,0 +1,8 @@
+{
+  "name": "Money-Matters",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "id": "4c8098c8"
+}

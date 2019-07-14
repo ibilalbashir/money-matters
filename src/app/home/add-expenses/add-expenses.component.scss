@@ -1,0 +1,33 @@
+mat-panel-title {
+    justify-content: center !important;
+    color: white;
+}
+
+
+mat-expansion-panel{
+background: #0071BC
+}
+mat-expansion-panel:hover{
+    background: #0071BC
+    }
+
+mat-expansion-panel-header{
+background: #0071BC;
+}
+
+mat-accordion{
+    margin: 30px;
+}
+.white-background{
+    background: white;
+}
+
+
+.mat-expansion-panel:not(.mat-expanded):not([aria-disabled=true]) .mat-expansion-panel-header:hover {
+    background: #0071BC !important;
+}
+
+.mat-accordion .mat-expansion-panel {
+border-radius: 24px;
+margin-top: 20px
+}

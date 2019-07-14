@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <div class="ion-row">
+        <div class="ion-col" text-center>
+          انتخابات
+        </div>
+      </div>
+
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-grid class="top-pad">
+  <ion-row>
+    <ion-col>
+      <ion-button [routerLink]="['add-donations']" routerLinkActive="router-link-active" size="large" fill="clear">
+        <i class="fas fa-plus icon-font"></i></ion-button>
+      <p class="zero-top-margin">
+        چندہ کااندراج
+      </p>
+    </ion-col>
+    <ion-col>
+      <ion-button [routerLink]="['donor-list']" routerLinkActive="router-link-active" size="large" fill="clear"><i
+          class="fas fa-users icon-font"></i></ion-button>
+      <p class="zero-top-margin">
+        چندہ دینے والوں کی فھرست
+      </p>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button [routerLink]="['add-expenses']" routerLinkActive="router-link-active" size="large" fill="clear"><i
+          class="fas fa-minus icon-font"></i></ion-button>
+      <p class="zero-top-margin">
+        اخراجات کا اندراج
+      </p>
+    </ion-col>
+    <ion-col>
+      <ion-button [routerLink]="['expenses-list']" routerLinkActive="router-link-active" size="large" fill="clear"><i
+          class="fas fa-list icon-font"></i></ion-button>
+      <p class="zero-top-margin">
+        اخراجات کی فھرست
+      </p>
+
+    </ion-col>
+  </ion-row>
+</ion-grid>

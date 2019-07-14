@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <div class="ion-row">
+        <div class="ion-col" text-center>
+          اخراجات کا اندراج
+        </div>
+      </div>
+
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<form #myForm (ngSubmit)="expensesSubmit(); myForm.reset()">
+  <mat-accordion>
+    <mat-expansion-panel hideToggle=true [disabled]="true" [expanded]="true">
+
+      <ion-row justify-content-center style="margin-top: 26px;">
+        <ion-col text-center>
+          <ion-input name="name" required type="text" [(ngModel)]="expensesForm.name" class="white-background "
+            placeholder="نام"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row justify-content-center>
+        <ion-col text-center>
+          <ion-input required name="designation" type="text" [(ngModel)]="expensesForm.designation"
+            class="white-background " placeholder="عہدہ "></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row justify-content-center>
+        <ion-col text-center>
+          <ion-input required name="date" type="date" [(ngModel)]="expensesForm.date" class="white-background "
+            placeholder="  تاریخ"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row justify-content-center>
+        <ion-col text-center>
+          <ion-input required name="reason" type="text" [(ngModel)]="expensesForm.reason" class="white-background "
+            placeholder="مقصد"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row justify-content-center>
+        <ion-col text-center>
+          <ion-input required name="amount" type="amount" [(ngModel)]="expensesForm.amount" class="white-background "
+            placeholder="رقم"></ion-input>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col text-center>
+          <ion-button type="submit" shape="round" color="light">اندراج کریں</ion-button>
+        </ion-col>
+      </ion-row>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+
+</form>
+
+
+
+<ion-row>
+  <ion-col text-center>
+
+    <ion-button [routerLink]="['../..']" routerLinkActive="router-link-active"><i class="fas fa-home"></i></ion-button>
+  </ion-col>
+</ion-row>

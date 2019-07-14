@@ -1,0 +1,130 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <div class="ion-row">
+        <div class="ion-col" text-center>
+          چندے کا اندراج
+        </div>
+      </div>
+
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<mat-accordion>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        پہلے سے موجودچندہ دینےوالوں کےلیے
+      </mat-panel-title>
+
+
+    </mat-expansion-panel-header>
+    <form #myForm (ngSubmit)="oldDonorsSubmit(); myForm.reset()">
+
+
+      <ion-grid>
+        <ion-row justify-content-center>
+          <ion-col text-center>
+            <ion-select shape="round" name="name" type="text" [(ngModel)]="oldDonorsForm.name" placeholder="نام"
+              class="white-background ">
+              <ion-select-option *ngFor="let item of oldDonors" [value]="item.name">{{item.name}}</ion-select-option>
+            </ion-select>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid>
+        <ion-row justify-content-center>
+          <ion-col text-center>
+            <ion-input name="reason" type="text" [(ngModel)]="oldDonorsForm.reason" shape="round" placeholder="مقصد"
+              class="white-background "></ion-input>
+
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid>
+        <ion-row justify-content-center>
+          <ion-col text-center>
+            <ion-input name="amount" type="number" [(ngModel)]="oldDonorsForm.amount" shape="round" placeholder="رقم"
+              class="white-background "></ion-input>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid>
+        <ion-row justify-content-center>
+          <ion-col text-center>
+            <ion-button type shape="round" color="light">اندراج کریں</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </form>
+
+
+
+
+
+
+
+
+
+
+  </mat-expansion-panel>
+  <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        نئے چندہ دینے والوں کے لئے
+      </mat-panel-title>
+
+    </mat-expansion-panel-header>
+    <form #yourForm (ngSubmit)="addNewDonationFn(); yourForm.reset()">
+      <ion-row justify-content-center>
+        <ion-col text-center>
+          <ion-input name="name" type="text" [(ngModel)]="newDonorForm.name" class="white-background "
+            placeholder="نام">
+          </ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row justify-content-center>
+        <ion-col text-center>
+          <ion-input name="number" type="number" [(ngModel)]="newDonorForm.number" class="white-background "
+            placeholder="موبائل نمبر"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row justify-content-center>
+        <ion-col text-center>
+          <ion-input name="idCard" type="number" [(ngModel)]="newDonorForm.idCard" class="white-background "
+            placeholder="شناختی کارڈ کا نمبر"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row justify-content-center>
+        <ion-col text-center>
+          <ion-input name="reason" type="text" [(ngModel)]="newDonorForm.reason" class="white-background "
+            placeholder="مقصد">
+          </ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row justify-content-center>
+        <ion-col text-center>
+          <ion-input name="amount" type="number" [(ngModel)]="newDonorForm.amount" class="white-background "
+            placeholder="رقم">
+          </ion-input>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col text-center>
+          <ion-button type="submit" shape="round" color="light">اندراج کریں</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </mat-expansion-panel>
+</mat-accordion>
+
+
+<ion-row>
+  <ion-col text-center>
+
+    <ion-button [routerLink]="['../..']" routerLinkActive="router-link-active"><i class="fas fa-home"></i></ion-button>
+  </ion-col>
+</ion-row>

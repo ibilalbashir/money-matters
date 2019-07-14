@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <div class="ion-row">
+        <div class="ion-col" text-center>
+          اخراجات کی فہرست
+        </div>
+      </div>
+
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+
+
+  <ng-container matColumnDef="amount">
+    <th mat-header-cell *matHeaderCellDef> رقم </th>
+    <td mat-cell *matCellDef="let element"> {{element.amount}} </td>
+  </ng-container>
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> نام </th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+  <ng-container matColumnDef="date">
+    <th mat-header-cell *matHeaderCellDef> تاریخ </th>
+    <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+  </ng-container>
+  <ng-container matColumnDef="reason">
+    <th mat-header-cell *matHeaderCellDef> مقصد </th>
+    <td mat-cell *matCellDef="let element"> {{element.reason}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+
+
+
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<ion-row>
+  <ion-col text-center>
+
+    <ion-button [routerLink]="['../..']" routerLinkActive="router-link-active"><i class="fas fa-home"></i></ion-button>
+  </ion-col>
+</ion-row>
